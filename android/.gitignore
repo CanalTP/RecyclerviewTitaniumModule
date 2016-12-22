@@ -1,0 +1,12 @@
+/libs
+/example
+/documentation
+/dist
+/assets
+
+/build/*
+!/build/generated
+/build/generated/*
+!/build/generated/java
+/build/generated/java/*
+!/build/generated/java/.gitignore

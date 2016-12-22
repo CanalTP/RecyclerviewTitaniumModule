@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armeabi armeabi-v7a x86
+description: Recyclerview
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2016 by Your Company
+respackage: android.support.v7.recyclerview
+
+# these should not be edited
+name: Recyclerview
+moduleid: org.kisio.recyclerview
+guid: fc6f3e4d-79e4-4437-8c04-18d88e38b479
+platform: android
+minsdk: 5.1.2.GA
