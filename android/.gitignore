@@ -5,6 +5,8 @@
 /assets
 
 /build/*
+!/build/docs
+/build/docs/*
 !/build/generated
 /build/generated/*
 !/build/generated/java
