@@ -4,7 +4,15 @@
 	</description>
 
 	<property name="ti.module.root" location="${basedir}"/>
-	<property file="build.properties" />
+	<exec executable="sh" outputProperty='titanium.platform'>
+        <arg value="-c" />
+        <arg value="ti info -t titanium -o json | jq --raw-output '&quot;\(.titanium[.titaniumCLI.selectedSDK].path)/android&quot;'" />
+    </exec>
+    <exec executable="sh" outputProperty="android.platform">
+        <arg value="-c" />
+        <arg value="ti info -t android -o json | jq --raw-output '.android.targets[]  | select(.supported == true) | .path'" />
+    </exec>
+
 
 	<!-- Make sure 'architectures' is in manifest file -->
 	<property file="${ti.module.root}/manifest" prefix="manifest"/>
