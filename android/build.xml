@@ -10,9 +10,8 @@
     </exec>
     <exec executable="sh" outputProperty="android.platform">
         <arg value="-c" />
-        <arg value="ti info -t android -o json | jq --raw-output '.android.targets[]  | select(.supported == true) | .path'" />
+        <arg value="ti info -t android -o json | jq --raw-output '.android.targets[]  | select(.supported == true) | select(.type == &quot;platform&quot;) | .path'" />
     </exec>
-
 
 	<!-- Make sure 'architectures' is in manifest file -->
 	<property file="${ti.module.root}/manifest" prefix="manifest"/>
