@@ -7,8 +7,3 @@
 /build/*
 !/build/docs
 /build/docs/*
-!/build/generated
-/build/generated/*
-!/build/generated/java
-/build/generated/java/*
-!/build/generated/java/.gitignore
